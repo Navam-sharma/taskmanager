@@ -1,0 +1,26 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <h2>Edit-Profile</h2>
+
+  <div class="create-blog content">
+    <form action="/edit/<%= task.id %>" method="POST">
+      <label for="name">taskName:</label>
+      <input type="text" value="<%= task.name %>" id="title" name="name" required>
+      <label for="description">Description:</label>
+      <input type="text" value="<%= task.description %>"  id="snippet" name="description" required>
+      <label for="status" >status:</label>
+      <input type="text" value="<%= task.status %>"  name="status" id="status">
+      <label for="address">Address:</label>
+      <input type="date" value="<%= task.date %>"  name="date" id="date">
+    
+      <button type="submit">Update</button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- // login.ejs -->
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+  <div class="create-blog content">
+
+	<form class="form-inline" action="/login" method="POST">
+
+
+	
+		<h1>LOGIN</h1>
+		<label>userame:</label>
+		  <input #username type="text" name="username" placeholder="username">
+		  <br />
+		  <label >password:</label>
+
+		  <input #password type="password" name="password" placeholder="password">
+		  <br />
+		  <div class="sub">
+		  <button>Confirm identity</button>
+		</div>
+	</form>
+</div>
+</body>

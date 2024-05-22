@@ -1,0 +1,31 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="create-blog content">
+    <form action="/task/create" method="POST">
+
+      <label for="name">Task Name:</label>
+      <input type="text" id="title" name="name" required>
+
+      <label for="description">Description:</label>
+      <input type="text" id="snippet" name="description" required>
+
+      <label for="status">status:</label>
+      <input type="text" name="status" id="status">
+
+      <label for="date">date:</label>
+      <input type="date" name="date" id="date">
+      
+
+     <div class="sub">
+      <button type="submit">Add task</button>
+     </div> 
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

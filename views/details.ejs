@@ -1,0 +1,36 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="details content">
+    <h1>Profile:</h1>
+    <h2><%= task.name%></h2>
+    <div class="content">
+      <p><span>Name:</span><%= task.name %></p>
+      <p><span>Description:</span><%= task.description %></p>
+      <p><span>Status:</span><%= task.status %></p>
+      <!-- <p><span>Date:</span><%= task.date ? task.date.toDateString() : 'No date available' %></p> -->
+
+      <p><span>Created At:</span> <%= task.createdAt ? new Date(task.createdAt).toDateString() : 'No date available' %></p>
+      <p><span>Updated At:</span> <%= task.updatedAt ? new Date(task.updatedAt).toDateString() : 'No date available' %></p>
+  
+
+    </div>
+  </div>
+
+
+ <div class="operation-btn">
+   <br>
+   <form action="/tasks/<%= task.name %>" method="post">
+    <button type="submit" >Remove</button>
+  </form>
+   <form action="/edit/<%= task.name %>/<%= action %>" method="edit">
+    <button type="submit">Update</button>
+  </form>
+ </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

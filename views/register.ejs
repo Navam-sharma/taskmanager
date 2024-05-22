@@ -1,0 +1,27 @@
+<!-- // register.ejs -->
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+  <div class="create-blog content">
+
+    <form  class="form-inline" action="/register" method="post" >
+
+			<h1>REGISTRATION FORM</h1>
+			<label> username: </label>
+        	<input #username type="text" name="username"  placeholder="username">
+			<br/>
+
+			<label> Password  </label>
+			<input #password type="password" name="password"  placeholder="password">
+			<br/>
+			<div class="sub">
+			<button>Submit</button>
+		</div> 
+			
+      </form>
+      
+    </div>
+
+    </body>
+    
